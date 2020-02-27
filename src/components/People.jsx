@@ -2,30 +2,31 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-class Films extends Component {
+
+class People extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      films: []
+      people: []
     }
   }
 
   componentDidMount() {
-    fetch('https://ghibliapi.herokuapp.com/films')
+    fetch('https://ghibliapi.herokuapp.com/people')
       .then(res => res.json())
-      .then(films => this.setState({ films: films }))
+      .then(people => this.setState({ people: people }))
       .catch(err => console.log(err));
   }
 
   render() {
     return (
       <div>
-        {this.state.films.map(film => {
+        {this.state.people.map(people => {
           return (
-            <div id="filmCard"key={film.id}>
-              <h1>{film.title}</h1>
-              <Link to={`/films/${film.id}`}>More Info</Link>
+            <div id="pplCard"key={people.id}>
+              <h1>{people.name}</h1>
+              <Link to={`/people/${people.id}`}>More Info</Link>
             </div>
           )
         })}
@@ -34,4 +35,4 @@ class Films extends Component {
   }
 }
 
-export default Films
+export default People

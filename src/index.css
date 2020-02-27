@@ -6,3 +6,25 @@
 button {
   margin-right: 1em;
 }
+
+#card {
+  width: 200px;
+  margin-top: 2em;
+  padding: 1em;
+  border: 2px solid skyblue;
+  border-radius: 20px;
+}
+#filmCard {
+  width: 350px;
+  margin-top: 2em;
+  padding: 1em;
+  border: 2px solid skyblue;
+  border-radius: 20px;
+}
+#pplCard {
+  width: 250px;
+  margin-top: 2em;
+  padding: 1em;
+  border: 2px solid skyblue;
+  border-radius: 20px;
+}
